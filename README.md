@@ -14,4 +14,4 @@ Before running the project, ensure the following are installed on your machine:
 
 ## Installation
 
-(nano app.py)
+(´nano app.py´)
