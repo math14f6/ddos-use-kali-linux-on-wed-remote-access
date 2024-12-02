@@ -242,33 +242,3 @@ Dette vil starte serveren på http://0.0.0.0:5000/. Du kan nu tilgå den via din
 Vigtig Bemærkning
 
 Dette script er til læring og eksperimentering i kontrollerede miljøer. Misbrug af DDoS-angreb kan være ulovligt og kan medføre alvorlige konsekvenser. Sørg for, at
-
-3. Make sure `hping3` is installed on your system:
-
-    - On Ubuntu/Debian:
-
-      ```bash
-      sudo apt install hping3
-      ```
-
-4. Start the Flask application:
-
-    ```bash
-    python app.py
-    ```
-
-5. Open a browser and navigate to `http://localhost:5000` to access the control panel.
-
-## Login
-
-When you first visit the page, you will be prompted to log in with a password. The default password is:
-
-
-## Using the Application
-
-Once logged in, you can:
-
-- Enter IP addresses and ports for three targets.
-- Specify the duration of the attack in seconds.
-- Start and stop the attack via the web interface.
-
