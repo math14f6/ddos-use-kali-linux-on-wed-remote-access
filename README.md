@@ -1,63 +1,49 @@
 # ddos-use-kali-linux-on-wed-remote-access
-webgui ddos remote use kali linux 
-# DDoS Testing Tool
+# Flask DDoS Attack Control
 
-## Overview
-This tool is designed for **network stress testing**. It allows you to test the resilience of your server by simulating a DDoS attack. This tool is intended **only for educational purposes** and **testing servers that you own** or have explicit permission to test.
+This project provides a simple web interface to control a DDoS attack using `hping3` via a Flask application. Users can log in and start or stop an attack by specifying IP addresses, ports, and the duration of the attack.
 
-The application is a **web-based interface**, allowing you to control and configure stress tests from your browser.
+## Prerequisites
 
-### Features:
-- **Web-based interface** for easy access and control.
-- Allows configuration of **target IP**, **ports**, and **attack duration**.
-- Utilizes **all available CPU cores** for maximum stress testing.
-- **Real-time control** over the attack via the web interface.
+Before running the project, ensure the following are installed on your machine:
 
-## Disclaimer
-This tool is provided **"as is"** without any warranty.  
-By using this tool, you agree to:
-- Only use it to test servers that you own or have **explicit permission** to test.
-- Acknowledge that **illegal usage is prohibited** and will result in the immediate revocation of your permission to use this tool.
+- Python 3.x
+- Flask (`pip install flask`)
+- hping3 (needs to be run with root access)
+- Multiprocessing and threading modules (which come with Python)
 
-The author is **not responsible** for any misuse of this tool. Use at your own risk.
+## Installation
 
-## Requirements
+1. Clone this repository to your local machine:
 
-### On Kali Linux
-To use the tool on **Kali Linux**, you will need to install the following dependencies:
-1. **Python 3.x**:
-   - Kali Linux usually comes with Python 3.x pre-installed. To ensure you have the latest version, use the following command:
-     ```bash
-     sudo apt update
-     sudo apt install python3
-     ```
+    ```bash
+    git clone https://github.com/your-username/flask-ddos-control.git
+    cd flask-ddos-control
+    ```
 
-2. **Pip (Python package installer)**:
-   - To install necessary Python libraries, you will need pip:
-     ```bash
-     sudo apt install python3-pip
-     ```
+2. Install the required Python libraries:
 
-3. **Flask**:
-   - This application uses Flask for the web interface. Install Flask using:
-     ```bash
-     pip3 install Flask
-     ```
+    ```bash
+    pip install -r requirements.txt
+    ```
 
-4. **Hping3**:
-   - Hping3 is used to simulate the DDoS traffic. Install Hping3 on Kali Linux by running:
-     ```bash
-     sudo apt install hping3
-     ```
+3. Make sure `hping3` is installed on your system:
 
-### On General Linux
-For general Linux distributions, you can follow the same steps as Kali Linux, with the exception of `apt` being replaced by your distribution's package manager (e.g., `yum`, `dnf`, `pacman`).
+    - On Ubuntu/Debian:
 
-- Install **Python 3.x**, **Pip**, **Flask**, and **Hping3** as described above.
+      ```bash
+      sudo apt install hping3
+      ```
 
-### Additional Setup for Remote Access
-If you want to access the web interface from other devices:
-1. Ensure your firewall allows traffic on port 5000.
-2. Run the tool with:
-   ```bash
-   python3 app.py
+4. Start the Flask application:
+
+    ```bash
+    python app.py
+    ```
+
+5. Open a browser and navigate to `http://localhost:5000` to access the control panel.
+
+## Login
+
+When you first visit the page, you will be prompted to log in with a password. The default password is:
+
