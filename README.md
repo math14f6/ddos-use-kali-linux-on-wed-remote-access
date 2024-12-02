@@ -17,8 +17,7 @@ Before running the project, ensure the following are installed on your machine:
 1. Clone this repository to your local machine:
 
     ```bash
-    git clone https://github.com/your-username/flask-ddos-control.git
-    cd flask-ddos-control
+    
     ```
 
 2. Install the required Python libraries:
